@@ -60,7 +60,7 @@ struct ChatView: View {
 
     private var messageList: some View {
         ScrollViewReader { proxy in
-            ZStack(alignment: .bottom) {
+            ZStack(alignment: .bottomTrailing) {
                 ScrollView {
                     LazyVStack(spacing: 12) {
                         ForEach(viewModel.conversation.messages) { message in
@@ -114,6 +114,7 @@ struct ChatView: View {
                             .clipShape(Circle())
                             .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
                     }
+                    .padding(.trailing, 16)
                     .padding(.bottom, 8)
                     .transition(.scale.combined(with: .opacity))
                     .accessibilityLabel("Scroll to bottom")
