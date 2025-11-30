@@ -5,4 +5,3 @@ enum AppConfig {
         Secrets.claudeAPIKey
     }
 }
-git rm --cached CODER_INSTRUCTION.md REVIEWER_INSTRUCTION.md
